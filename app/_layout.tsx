@@ -79,6 +79,9 @@ export default function RootLayout() {
               <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
               <Stack.Screen name="(auth)/signup" options={{ headerShown: false }} />
               <Stack.Screen name="(auth)/forgot-password" options={{ headerShown: false }} />
+              <Stack.Screen name='prediction/crop_location' options={{ headerShown: false }} />
+              <Stack.Screen name='prediction/crop_nutrient' options={{ headerShown: false }} />
+              <Stack.Screen name='prediction/soil_fertility' options={{ headerShown: false }} />
               <Stack.Screen name="welcome" options={{ headerShown: false }} />
             </Stack>
             <StatusBar style="auto" />

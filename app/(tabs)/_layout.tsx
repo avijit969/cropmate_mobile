@@ -40,12 +40,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="dashbord"
+        name='prediction'
         options={{
-          title: 'DashBorad',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="analytics-outline" color={color} />,
+          title: 'Prediction',
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="cloud-outline" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="recommendation"
+        options={{
+          title: 'Recommendation',
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="star-outline" color={color} />,
+        }}
+      />
+
     </Tabs>
   );
 }
