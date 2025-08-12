@@ -68,7 +68,6 @@ const SensorChart: React.FC<Props> = ({ history, visibleSensors, toggleSensor })
         ['N', 'P', 'K', 'OC', 'S'],
         ['Zn', 'Fe', 'Cu', 'Mn', 'B'],
     ]
-
     return (
         <View style={{ padding: wp(3), marginTop: 10 }}>
             <ThemedText type='subtitle' style={{ fontWeight: 'bold', marginBottom: 10 }}>

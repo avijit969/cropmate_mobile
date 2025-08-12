@@ -4,26 +4,34 @@ import InputField from '@/components/InputField'
 import ScreenWrapper from '@/components/ScreenWrapper'
 import { ThemedText } from '@/components/ThemedText'
 import { ThemedView } from '@/components/ThemedView'
-import { wp } from '@/helpers/common'
+import { hp, wp } from '@/helpers/common'
+import { supabase } from '@/lib/supabase'
 import { RootState } from '@/store/store'
+import { Ionicons } from '@expo/vector-icons'
+import axios from 'axios'
+import { useRouter } from 'expo-router'
 import React, { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import { useSelector } from 'react-redux'
 
 const SoilFertility = () => {
     const sensorData = useSelector((state: RootState) => state.sensorData)
-
+    const { user } = useSelector((state: RootState) => state.user)
     const [form, setForm] = useState({
         N: '', P: '', K: '', pH: '', EC: '', OC: '',
-        S: '', Zn: '', Fe: '', Cu: '', Mn: '', B: ''
+        S: '', Zn: '', Fe: '', Cu: '', Mn: '', B: '',
+        Humidity: '', Temperature: '', Water: ''
     })
 
     const [result, setResult] = useState<string | null>(null)
     const [loading, setLoading] = useState(false)
-
+    const router = useRouter()
     // ✅ Sync form with sensorData changes
     useEffect(() => {
         setForm({
+            Temperature: sensorData.temp?.toString() ?? '',
+            Humidity: sensorData.hum?.toString() ?? '',
+            Water: sensorData.water?.toString() ?? '',
             N: sensorData.N?.toString() ?? '',
             P: sensorData.P?.toString() ?? '',
             K: sensorData.K?.toString() ?? '',
@@ -42,38 +50,67 @@ const SoilFertility = () => {
     const handleChange = (key: keyof typeof form, value: string) => {
         setForm(prev => ({ ...prev, [key]: value }))
     }
+    const savePreditionWithSensorData = async () => {
+        const { data: response, error: sensorDataError } = await supabase.from("sensor_data").insert([{
+            n: form.N,
+            p: form.P,
+            k: form.K,
+            pH: form.pH,
+            s: form.S,
+            zn: form.Zn,
+            fe: form.Fe,
+            cu: form.Cu,
+            mn: form.Mn,
+            b: form.B,
+            humidity: sensorData.hum,
+            temperature: sensorData.temp,
+            water: sensorData.water,
+            created_by: user?.id
+        }]).select()
+        console.log(response, sensorDataError)
+        // save this sensor data to prediction table
+        if (sensorDataError) {
+            console.error('Error saving sensor data:', sensorDataError)
+        }
+        if (!response) return
+        const { data, error } = await supabase
+            .from('prediction')
+            .insert([
+                { created_by: user?.id, result, type: 'soil fertility', sensor_data: response[0].id },
+            ])
+            .select()
 
+        if (error) {
+            console.error('Error saving prediction:', error)
+        }
+        if (!data) return
+    }
     const handlePrediction = async () => {
         setLoading(true)
         setResult(null)
         try {
-            const cleanedForm = Object.fromEntries(
-                Object.entries(form).map(([key, val]) => [key, parseFloat(val)])
-            )
-
-            const response = await fetch(
-                'https://cropmate-ml-backend.onrender.com/predict-soil-fertility',
+            const { data } = await axios.post(
+                `${process.env.EXPO_PUBLIC_ML_API_URL}/predict-soil-fertility`,
+                form,
                 {
-                    method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(cleanedForm),
+                        'Content-Type': 'application/json'
+                    }
                 }
             )
+            console.log('Prediction Response:', data)
 
-            const data = await response.json()
-            const message = data.message?.toLowerCase()
-
-            if (message === 'fertile') {
+            if (data.message === 'Fertile') {
                 setResult('✅ The soil is Fertile and suitable for cultivation.')
-            } else if (message === 'not fertile') {
+                await savePreditionWithSensorData()
+            } else if (data.message === 'Not Fertile') {
                 setResult('⚠️ The soil is Not Fertile. Consider adding compost, organic fertilizers, or crop rotation.')
+                await savePreditionWithSensorData()
             } else {
                 setResult('❓ Unknown prediction result.')
             }
         } catch (err) {
-            console.error('Prediction Error:', err)
+            console.log('Prediction Error:', err)
             setResult('❌ Prediction failed. Please try again.')
         } finally {
             setLoading(false)
@@ -86,7 +123,7 @@ const SoilFertility = () => {
     return (
         <ScreenWrapper>
             <ThemedView style={{ flex: 1, paddingHorizontal: wp(2) }}>
-                <Header name="Check Soil Fertility" />
+                <Header name="Check Soil Fertility" right={<Ionicons name="ellipsis-vertical-outline" size={24} color="black" />} />
                 <ScrollView contentContainerStyle={styles.form}>
                     {fields.map(([key, val], index) => {
                         // Group into rows of 3
@@ -96,7 +133,7 @@ const SoilFertility = () => {
                             return (
                                 <View key={key} style={styles.row}>
                                     <View style={styles.inputWrapper}>
-                                        <ThemedText type="default" style={styles.label}>{key}</ThemedText>
+                                        <ThemedText type="defaultSemiBold" style={styles.label}>{key}</ThemedText>
                                         <InputField
                                             placeholder={`Enter ${key}`}
                                             value={val}
@@ -105,7 +142,7 @@ const SoilFertility = () => {
                                     </View>
                                     {second && (
                                         <View style={styles.inputWrapper}>
-                                            <ThemedText type="default" style={styles.label}>{second[0]}</ThemedText>
+                                            <ThemedText type="defaultSemiBold" style={styles.label}>{second[0]}</ThemedText>
                                             <InputField
                                                 placeholder={`Enter ${second[0]}`}
                                                 value={second[1]}
@@ -115,7 +152,7 @@ const SoilFertility = () => {
                                     )}
                                     {third && (
                                         <View style={styles.inputWrapper}>
-                                            <ThemedText type="default" style={styles.label}>{third[0]}</ThemedText>
+                                            <ThemedText type="defaultSemiBold" style={styles.label}>{third[0]}</ThemedText>
                                             <InputField
                                                 placeholder={`Enter ${third[0]}`}
                                                 value={third[1]}
@@ -128,9 +165,6 @@ const SoilFertility = () => {
                         }
                         return null
                     })}
-
-                    <Button title={loading ? 'Predicting...' : 'Check Soil Fertility'} onPress={handlePrediction} />
-
                     {result && (
                         <ThemedView>
                             <ThemedText style={styles.result} type="subtitle">
@@ -139,6 +173,12 @@ const SoilFertility = () => {
                         </ThemedView>
 
                     )}
+                    <ThemedView style={styles.buttonContainer}>
+                        <Button title={loading ? 'Predicting...' : 'Check Soil Fertility'} onPress={handlePrediction} />
+                        <ThemedText style={styles.or}>OR</ThemedText>
+                        <Button title='View History' onPress={() => router.push(`/prediction/history/${"soil fertility"}` as "/prediction/history/[type]")} />
+                    </ThemedView>
+
                 </ScrollView>
             </ThemedView>
         </ScreenWrapper>
@@ -150,7 +190,7 @@ export default SoilFertility
 const styles = StyleSheet.create({
     form: {
         paddingBottom: 40,
-        gap: 8,
+        gap: 1,
     },
     row: {
         flexDirection: 'row',
@@ -165,8 +205,14 @@ const styles = StyleSheet.create({
         marginLeft: 4,
         fontSize: 14,
     },
+    buttonContainer: {
+        padding: wp(2),
+        gap: hp(1)
+    },
+    or: {
+        textAlign: 'center',
+    },
     result: {
-        marginTop: 20,
         fontWeight: 'bold',
         textAlign: 'center',
         fontSize: 20,

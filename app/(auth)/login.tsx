@@ -27,6 +27,7 @@ const Login = () => {
 
         if (error) {
             ToastAndroid.show(error.message, ToastAndroid.SHORT);
+
         } else {
             ToastAndroid.show('Login Successful', ToastAndroid.SHORT);
             router.replace("/home")

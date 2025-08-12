@@ -7,7 +7,6 @@ import { theme } from '@/constants/theme'
 import { hp, wp } from '@/helpers/common'
 import { RootState } from '@/store/store'
 import { useRouter } from 'expo-router'
-
 import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
 import { useSelector } from 'react-redux'
@@ -48,13 +47,6 @@ const Prediction = () => {
                         <Button title="Get Location-Based Crop Prediction" onPress={() => {
                             router.push('/prediction/crop_location')
                         }} />
-                    </ThemedView>
-                    <ThemedView style={[styles.section, { marginBottom: hp(10) }]}>
-                        <ThemedText type="subtitle">Crop Recommendation (Location-Based)</ThemedText>
-                        <ThemedText>
-                            Get crop suggestions based on your current GPS location and regional farming data.
-                        </ThemedText>
-                        <Button title="Get Location-Based Crop Prediction" onPress={() => { }} />
                     </ThemedView>
                 </ScrollView>
             </ThemedView>
