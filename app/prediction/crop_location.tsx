@@ -10,6 +10,7 @@ import { RootState } from '@/store/store'
 import { Ionicons } from '@expo/vector-icons'
 import { Picker } from '@react-native-picker/picker'
 import axios from 'axios'
+import * as Location from 'expo-location'
 import { useRouter } from 'expo-router'
 import React, { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
@@ -22,16 +23,41 @@ const areas = [
 ]
 const seasons = ['Pre-Kharif', 'Rabi']
 
-
 const CropLocation = () => {
     const sensorData = useSelector((state: RootState) => state.sensorData)
     const user = useSelector((state: RootState) => state.user.user)
     const [loading, setLoading] = useState(false)
     const router = useRouter()
+    const [latitude, setLatitude] = useState<string | null>(null)
+    const [longitude, setLongitude] = useState<string | null>(null)
+
+    useEffect(() => {
+        (async () => {
+            let { status } = await Location.requestForegroundPermissionsAsync()
+            if (status !== "granted") {
+                console.log("Permission to access location denied")
+                return
+            }
+            const subscription = await Location.watchPositionAsync(
+                {
+                    accuracy: Location.Accuracy.High,
+                    distanceInterval: 5,
+                },
+                (loc) => {
+                    setLatitude(loc.coords.latitude.toString())
+                    setLongitude(loc.coords.longitude.toString())
+                }
+            )
+
+            return () => {
+                subscription.remove()
+            }
+        })()
+    }, [])
 
     const [form, setForm] = useState({
-        Latitude: '',
-        Longitude: '',
+        Latitude: latitude ?? '',
+        Longitude: longitude ?? '',
         District: '',
         Area: '',
         Season: '',
@@ -46,6 +72,16 @@ const CropLocation = () => {
         OC: ''
     })
 
+    useEffect(() => {
+        if (latitude && longitude) {
+            setForm(prev => ({
+                ...prev,
+                Latitude: latitude,
+                Longitude: longitude,
+            }))
+        }
+    }, [latitude, longitude])
+
     const [result, setResult] = useState<string | null>(null)
 
     useEffect(() => {
@@ -57,7 +93,9 @@ const CropLocation = () => {
             Nitrogen: sensorData.N?.toString() ?? '',
             Phosphorous: sensorData.P?.toString() ?? '',
             Potassium: sensorData.K?.toString() ?? '',
-            pH: sensorData.pH?.toString() ?? ''
+            pH: sensorData.pH?.toString() ?? '',
+            EC: sensorData.EC?.toString() ?? '',
+            OC: sensorData.OC?.toString() ?? '',
         }))
     }, [sensorData])
 
@@ -127,7 +165,6 @@ const CropLocation = () => {
             setLoading(false)
         }
     }
-
 
     const renderInput = (label: keyof typeof form) => (
         <View style={styles.inputWrapper} key={label}>

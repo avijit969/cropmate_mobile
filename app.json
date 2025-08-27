@@ -17,7 +17,12 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.abhijit969.CropMate"
+      "package": "com.abhijit969.CropMate",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDdvsGey6Uv6prHWFJvFNze56ngjesjpLo"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +41,19 @@
         }
       ],
       [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-maps",
+        {
+          "requestLocationPermission": true,
+          "locationPermission": "Allow $(PRODUCT_NAME) to use your location"
+        }
+      ],
+      [
         "react-native-ble-plx",
         {
           "isBackgroundEnabled": true,
@@ -45,7 +63,8 @@
           ],
           "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to connect to bluetooth devices"
         }
-      ]
+      ],
+      "expo-maps"
     ],
     "experiments": {
       "typedRoutes": true

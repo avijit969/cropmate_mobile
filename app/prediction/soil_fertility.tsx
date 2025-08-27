@@ -14,6 +14,7 @@ import React, { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import { useSelector } from 'react-redux'
 
+
 const SoilFertility = () => {
     const sensorData = useSelector((state: RootState) => state.sensorData)
     const { user } = useSelector((state: RootState) => state.user)
@@ -26,7 +27,7 @@ const SoilFertility = () => {
     const [result, setResult] = useState<string | null>(null)
     const [loading, setLoading] = useState(false)
     const router = useRouter()
-    // ✅ Sync form with sensorData changes
+
     useEffect(() => {
         setForm({
             Temperature: sensorData.temp?.toString() ?? '',
@@ -50,6 +51,7 @@ const SoilFertility = () => {
     const handleChange = (key: keyof typeof form, value: string) => {
         setForm(prev => ({ ...prev, [key]: value }))
     }
+
     const savePreditionWithSensorData = async () => {
         const { data: response, error: sensorDataError } = await supabase.from("sensor_data").insert([{
             n: form.N,
@@ -68,7 +70,6 @@ const SoilFertility = () => {
             created_by: user?.id
         }]).select()
         console.log(response, sensorDataError)
-        // save this sensor data to prediction table
         if (sensorDataError) {
             console.error('Error saving sensor data:', sensorDataError)
         }
@@ -85,6 +86,7 @@ const SoilFertility = () => {
         }
         if (!data) return
     }
+
     const handlePrediction = async () => {
         setLoading(true)
         setResult(null)
@@ -92,11 +94,7 @@ const SoilFertility = () => {
             const { data } = await axios.post(
                 `${process.env.EXPO_PUBLIC_ML_API_URL}/predict-soil-fertility`,
                 form,
-                {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }
+                { headers: { 'Content-Type': 'application/json' } }
             )
             console.log('Prediction Response:', data)
 
@@ -117,19 +115,21 @@ const SoilFertility = () => {
         }
     }
 
+    // ✅ Hide these fields in UI
+    const hiddenFields = ['S', 'Zn', 'Fe', 'Cu', 'Mn', 'B']
 
-    const fields = Object.entries(form)
+    // ✅ Only show non-hidden fields
+    const visibleFields = Object.entries(form).filter(([key]) => !hiddenFields.includes(key))
 
     return (
         <ScreenWrapper>
             <ThemedView style={{ flex: 1, paddingHorizontal: wp(2) }}>
                 <Header name="Check Soil Fertility" right={<Ionicons name="ellipsis-vertical-outline" size={24} color="black" />} />
                 <ScrollView contentContainerStyle={styles.form}>
-                    {fields.map(([key, val], index) => {
-                        // Group into rows of 3
+                    {visibleFields.map(([key, val], index) => {
                         if (index % 3 === 0) {
-                            const second = fields[index + 1]
-                            const third = fields[index + 2]
+                            const second = visibleFields[index + 1]
+                            const third = visibleFields[index + 2]
                             return (
                                 <View key={key} style={styles.row}>
                                     <View style={styles.inputWrapper}>
@@ -167,18 +167,15 @@ const SoilFertility = () => {
                     })}
                     {result && (
                         <ThemedView>
-                            <ThemedText style={styles.result} type="subtitle">
-                                Result</ThemedText>
+                            <ThemedText style={styles.result} type="subtitle">Result</ThemedText>
                             <ThemedText style={styles.result}>{result}</ThemedText>
                         </ThemedView>
-
                     )}
                     <ThemedView style={styles.buttonContainer}>
                         <Button title={loading ? 'Predicting...' : 'Check Soil Fertility'} onPress={handlePrediction} />
                         <ThemedText style={styles.or}>OR</ThemedText>
                         <Button title='View History' onPress={() => router.push(`/prediction/history/${"soil fertility"}` as "/prediction/history/[type]")} />
                     </ThemedView>
-
                 </ScrollView>
             </ThemedView>
         </ScreenWrapper>
@@ -218,3 +215,4 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
 })
+

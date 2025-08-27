@@ -83,6 +83,7 @@ export default function RootLayout() {
               <Stack.Screen name='prediction/crop_nutrient' options={{ headerShown: false }} />
               <Stack.Screen name='prediction/soil_fertility' options={{ headerShown: false }} />
               <Stack.Screen name="welcome" options={{ headerShown: false }} />
+              <Stack.Screen name="collection" options={{ headerShown: false }} />
             </Stack>
             <StatusBar style="auto" />
           </BottomSheetModalProvider>

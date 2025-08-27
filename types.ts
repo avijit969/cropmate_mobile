@@ -23,3 +23,15 @@ export interface SensorData {
   Mn?: number;
   B?: number;
 }
+
+export interface CollectionData {
+  farmerName: string;
+  cropName: string;
+  stateName: string;
+  districtName: string;
+  villageName: string;
+  latitude: string;
+  longitude: string;
+  areaImage: string;
+  sensorData: SensorData;
+}

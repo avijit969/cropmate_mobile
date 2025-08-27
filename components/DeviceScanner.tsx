@@ -58,17 +58,21 @@ const DeviceScanner: React.FC<DeviceScannerProps> = ({
                 numColumns={2}
                 contentContainerStyle={styles.flatListContent}
                 columnWrapperStyle={styles.columnWrapper}
-                renderItem={({ item }) => (
-                    <TouchableOpacity
-                        onPress={() => onConnect(item)}
-                        style={styles.deviceCard}
-                    >
-                        <Ionicons name="bluetooth" size={28} color="#4F46E5" />
-                        <ThemedText style={styles.deviceName}>
-                            {item.name || 'Unknown'}
-                        </ThemedText>
-                    </TouchableOpacity>
-                )}
+                renderItem={({ item }) => {
+                    // Show only 'SoilSensor' in the UI regardless of actual device name
+                    const displayName = item.name?.includes('SoilSensor') ? 'SoilSensor' : item.name || 'Unknown';
+                    return (
+                        <TouchableOpacity
+                            onPress={() => onConnect(item)}
+                            style={styles.deviceCard}
+                        >
+                            <Ionicons name="bluetooth" size={28} color="#4F46E5" />
+                            <ThemedText style={styles.deviceName}>
+                                {displayName}
+                            </ThemedText>
+                        </TouchableOpacity>
+                    )
+                }}
             />
         </View>
     )

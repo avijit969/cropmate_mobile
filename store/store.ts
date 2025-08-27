@@ -1,3 +1,4 @@
+import collectionDataSlice from "@/features/collectiondata/collectionDataSclice";
 import sensorDataSlice from "@/features/sensordata/sensorDataSclice";
 import userSlice from "@/features/user/userSclice";
 import { configureStore } from "@reduxjs/toolkit";
@@ -6,6 +7,7 @@ export const store = configureStore({
   reducer: {
     user: userSlice,
     sensorData: sensorDataSlice,
+    collectionData: collectionDataSlice,
   },
 });
 export type RootState = ReturnType<typeof store.getState>;

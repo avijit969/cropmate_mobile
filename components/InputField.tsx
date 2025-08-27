@@ -1,7 +1,7 @@
-import { StyleSheet, TextInput, useColorScheme, View } from 'react-native'
-import React, { useState } from 'react'
-import { wp } from '@/helpers/common'
 import { theme } from '@/constants/theme'
+import { wp } from '@/helpers/common'
+import React, { useState } from 'react'
+import { StyleSheet, TextInput, useColorScheme, View } from 'react-native'
 
 interface Props {
     icon?: React.ReactNode
