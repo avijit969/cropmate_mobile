@@ -10,6 +10,8 @@ const initialState: CollectionData = {
   latitude: "",
   longitude: "",
   areaImage: "",
+  soilImage: "",
+  seasonalCropType: "",
   sensorData: {},
 };
 
@@ -26,6 +28,7 @@ const collectionDataSlice = createSlice({
           stateName: string;
           districtName: string;
           villageName: string;
+          seasonalCropType: string;
         };
       }
     ) => {
@@ -34,6 +37,7 @@ const collectionDataSlice = createSlice({
       state.stateName = action.payload.stateName;
       state.districtName = action.payload.districtName;
       state.villageName = action.payload.villageName;
+      state.seasonalCropType = action.payload.seasonalCropType;
     },
     addLocationInformation: (
       state,
@@ -48,6 +52,9 @@ const collectionDataSlice = createSlice({
     addSensorData: (state, action: { payload: { sensorData: SensorData } }) => {
       state.sensorData = action.payload.sensorData;
     },
+    addSoilImage: (state, action: { payload: { soilImage: string } }) => {
+      state.soilImage = action.payload.soilImage;
+    },
     clearCollectionData: (state) => {
       state = initialState;
     },
@@ -59,6 +66,7 @@ export const {
   addLocationInformation,
   addAreaImage,
   addSensorData,
+  addSoilImage,
   clearCollectionData,
 } = collectionDataSlice.actions;
 export default collectionDataSlice.reducer;

@@ -1,7 +1,8 @@
 import { theme } from '@/constants/theme'
-import { addAreaImage, addBasicInformation, addLocationInformation } from '@/features/collectiondata/collectionDataSclice'
+import { addAreaImage, addBasicInformation, addLocationInformation, addSoilImage } from '@/features/collectiondata/collectionDataSclice'
 import { wp } from '@/helpers/common'
 import { Ionicons } from '@expo/vector-icons'
+import { Picker } from '@react-native-picker/picker'
 import * as ImagePicker from 'expo-image-picker'
 import * as Location from 'expo-location'
 import { useRouter } from 'expo-router'
@@ -11,7 +12,6 @@ import { useDispatch } from 'react-redux'
 import InputField from './InputField'
 import { ThemedText } from './ThemedText'
 import { ThemedView } from './ThemedView'
-
 const InputContainer: React.FC = () => {
     // 🔹 Form states
     const [stateName, setStateName] = useState('')
@@ -22,9 +22,12 @@ const InputContainer: React.FC = () => {
     const [longitude, setLongitude] = useState('')
     const [farmerName, setFarmerName] = useState('')
     const [image, setImage] = useState<string | null>(null)
+    const [soilImage, setSoilImage] = useState<string | null>(null)
     const [location, setLocation] = useState<Location.LocationObject | null>(null)
+    const [seasonalCropTypeValue, setSeasonalCropTypeValue] = useState('')
     const dispatch = useDispatch()
     const router = useRouter()
+    const seasonalCropType = ['Rabi (october-december)', 'Kharif (july-august)', 'Zaid (March-April)']
     useEffect(() => {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
@@ -71,6 +74,25 @@ const InputContainer: React.FC = () => {
         }
     }
 
+    const pickSoilImage = async () => {
+        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync()
+        if (status !== 'granted') {
+            Alert.alert('Permission required', 'Please allow access to photo library.')
+            return
+        }
+
+        const result = await ImagePicker.launchCameraAsync({
+            mediaTypes: ["images"],
+            quality: 0.7,
+            allowsEditing: true,
+            aspect: [4, 3],
+        })
+
+        if (!result.canceled && result.assets && result.assets.length > 0) {
+            setSoilImage(result.assets[0].uri)
+        }
+    }
+
     // 🔹 Submit
     const handleSubmit = () => {
         dispatch(addBasicInformation({
@@ -79,6 +101,7 @@ const InputContainer: React.FC = () => {
             districtName,
             villageName,
             farmerName,
+            seasonalCropType: seasonalCropTypeValue,
         }))
         dispatch(addLocationInformation({
             latitude,
@@ -86,6 +109,9 @@ const InputContainer: React.FC = () => {
         }))
         dispatch(addAreaImage({
             areaImage: image!,
+        }))
+        dispatch(addSoilImage({
+            soilImage: soilImage!,
         }))
         router.push('/data-collection')
     }
@@ -106,6 +132,17 @@ const InputContainer: React.FC = () => {
                     <InputField placeholder="Enter District Name" onChange={setDistrictName} value={districtName} />
                     <InputField placeholder="Enter Village Name" onChange={setVillageName} value={villageName} />
                     <InputField placeholder="Enter Crop Name" onChange={setCropName} value={cropName} />
+                    <ThemedText type="defaultSemiBold" style={styles.sectionTitle}>
+                        Crop Type
+                    </ThemedText>
+                    <Picker
+                        selectedValue={seasonalCropTypeValue}
+                        onValueChange={(val) => setSeasonalCropTypeValue(val)}
+                    >
+                        {seasonalCropType.map((type, index) => (
+                            <Picker.Item key={index} label={type} value={type} />
+                        ))}
+                    </Picker>
                 </View>
 
                 {/* Location Info */}
@@ -135,7 +172,25 @@ const InputContainer: React.FC = () => {
                             <>
                                 <Ionicons name="image-outline" size={40} color={theme.colors.primary} />
                                 <ThemedText type="defaultSemiBold" style={styles.uploadText}>
-                                    Choose Image
+                                    Take Area Image
+                                </ThemedText>
+                            </>
+                        )}
+                    </TouchableOpacity>
+                </View>
+                {/* Upload Soil Image */}
+                <View style={styles.card}>
+                    <ThemedText type="title" style={styles.sectionTitle}>
+                        Upload Soil Image
+                    </ThemedText>
+                    <TouchableOpacity style={styles.uploadBox} onPress={pickSoilImage}>
+                        {soilImage ? (
+                            <Image source={{ uri: soilImage }} style={styles.previewImage} />
+                        ) : (
+                            <>
+                                <Ionicons name="image-outline" size={40} color={theme.colors.primary} />
+                                <ThemedText type="defaultSemiBold" style={styles.uploadText}>
+                                    Take Soil Image
                                 </ThemedText>
                             </>
                         )}

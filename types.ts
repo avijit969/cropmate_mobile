@@ -34,4 +34,6 @@ export interface CollectionData {
   longitude: string;
   areaImage: string;
   sensorData: SensorData;
+  soilImage: string;
+  seasonalCropType: string;
 }
