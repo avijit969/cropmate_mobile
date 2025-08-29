@@ -26,265 +26,490 @@ All data is securely stored and managed through **Supabase**, ensuring both **re
 
 ## 📸 Flow Screenshots
 
-<style>
-  .screenshot-table {
-    border-collapse: collapse;
+**1. Landing Page**
+
+<table style="border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
-    margin-bottom: 20px;
-  }
-  .screenshot-caption {
-    text-align: center;
+    margin-bottom: 20px;">
+  <tr>
+    <td style="text-align: center;
     padding: 6px;
     font-weight: 600;
-    width: 50%;
-  }
-  .screenshot-section {
-    text-align: center;
-    padding: 8px;
-    font-weight: 600;
-    font-size: 1.1em;
-    border-bottom: 1px solid #ddd;
-  }
-  .screenshot-img-cell {
-    text-align: center;
+    width: 50%;">Landing Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;
     padding: 6px;
-    width: 50%;
-  }
-  .screenshot-img {
-    display: block;
+    width: 50%;">
+      <img style="display: block;
     width: 98%;
     max-width: 100%;
     margin: 0 auto;
-    border-radius: 6px;
-  }
-  .empty-cell {
-    width: 50%;
-    border: none;
-    background: none;
-  }
-</style>
-
-**1. Landing Page**
-
-<table class="screenshot-table">
-  <tr>
-    <td class="screenshot-caption">Landing Page</td>
-    <td class="empty-cell"></td>
-  </tr>
-  <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/landing.CropMate.png" alt="Landing Page">
+    border-radius: 6px;" src="./assets/screenshots/landing.CropMate.png" alt="Landing Page">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 </table>
 
 **2. Authentication**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">Login Page</td>
-    <td class="screenshot-caption">SignUp Page</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Login Page</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">SignUp Page</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/login.CropMate.png" alt="Login Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/login.CropMate.png" alt="Login Page">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/signup.CropMate.png" alt="SignUp Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/signup.CropMate.png" alt="SignUp Page">
     </td>
   </tr>
 </table>
 
 **3. Home**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">User Home Page</td>
-    <td class="screenshot-caption">Admin Home Page</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">User Home Page</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Admin Home Page</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/Screenshot_20250828-143052.CropMate.png" alt="User Home Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/Screenshot_20250828-143052.CropMate.png" alt="User Home Page">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/home_admin.CropMate.png" alt="Admin Home Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/home_admin.CropMate.png" alt="Admin Home Page">
     </td>
   </tr>
 </table>
 
 **4. Predictions**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">Predictions Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Predictions Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/prediction.CropMate.png" alt="Predictions Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/prediction.CropMate.png" alt="Predictions Page">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 
   <tr>
-    <td class="screenshot-section" colspan="2">Check Soil Fertility</td>
+    <td style="text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;" colspan="2">Check Soil Fertility</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/check_soil_fertility.CropMate.png" alt="Soil Fertility">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/check_soil_fertility.CropMate.png" alt="Soil Fertility">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/soil_fertility-result.CropMate.png" alt="Soil Fertility Results">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/soil_fertility-result.CropMate.png" alt="Soil Fertility Results">
     </td>
   </tr>
 
   <tr>
-    <td class="screenshot-caption">Soil Fertility History Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Soil Fertility History Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/soil_fertility-history.CropMate.png" alt="Soil Fertility History">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/soil_fertility-history.CropMate.png" alt="Soil Fertility History">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   
   <tr>
-    <td class="screenshot-section" colspan="2">Crop Recommendation (Nutrient-based)</td>
+    <td style="text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;" colspan="2">Crop Recommendation (Nutrient-based)</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/crop_recommendation-1.CropMate.png" alt="Crop Recommendation(Nutrient-based)">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-1.CropMate.png" alt="Crop Recommendation(Nutrient-based)">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/crop_recommendation-nutrient_result.CropMate.png" alt="Crop Recommendation(Nutrient-based) Results">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-nutrient_result.CropMate.png" alt="Crop Recommendation(Nutrient-based) Results">
     </td>
   </tr>
 
   <tr>
-    <td class="screenshot-caption">Crop Recommendation(Nutrient-based) History Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Crop Recommendation(Nutrient-based) History Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/crop_recommendation-history.CropMate.png" alt="Crop Recommendation(Nutrient-based) History">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-history.CropMate.png" alt="Crop Recommendation(Nutrient-based) History">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   
   <tr>
-    <td class="screenshot-section" colspan="2">Crop Recommendation (Location-based)</td>
+    <td style="text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;" colspan="2">Crop Recommendation (Location-based)</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/crop_recommendation-location1.CropMate.png" alt="Crop Recommendation(Location-based)">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-location1.CropMate.png" alt="Crop Recommendation(Location-based)">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/crop_recommendation-location_result.CropMate.png" alt="Crop Recommendation(Location-based) Results">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-location_result.CropMate.png" alt="Crop Recommendation(Location-based) Results">
     </td>
   </tr>
 
   <tr>
-    <td class="screenshot-caption">Crop Recommendation(Location-based) History Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Crop Recommendation(Location-based) History Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/crop_recommendation-location.CropMate.png" alt="Crop Recommendation(Location-based) History">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-location.CropMate.png" alt="Crop Recommendation(Location-based) History">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 </table>
 
 **5. Recommendations**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">Recommendations Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Recommendations Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/recommendation.CropMate.png" alt="Recommendations Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/recommendation.CropMate.png" alt="Recommendations Page">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 </table>
 
 **6. Collection (Admin)**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">Collection Page</td>
-    <td class="screenshot-caption">With Details</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Collection Page</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">With Details</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/collection-1.CropMate.png" alt="Collection Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/collection-1.CropMate.png" alt="Collection Page">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/collection-2.CropMate.png" alt="With Details">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/collection-2.CropMate.png" alt="With Details">
     </td>
   </tr>
 
   <tr>
-    <td class="screenshot-caption">Submit</td>
-    <td class="screenshot-caption">Success</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Submit</td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Success</td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/collection-3.CropMate.png" alt="Submit">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/collection-3.CropMate.png" alt="Submit">
     </td>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/collection-success.CropMate.png" alt="Success">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/collection-success.CropMate.png" alt="Success">
     </td>
   </tr>
 </table>
 
 **7. View Collection Data**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">View Collection Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">View Collection Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/collection-view.CropMate.png" alt="View Collections Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/collection-view.CropMate.png" alt="View Collections Page">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 </table>
 
 **8. Profile**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">Profile Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Profile Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/profile.CropMate.png" alt="Profile Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/profile.CropMate.png" alt="Profile Page">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 </table>
 
 **9. Logout**
 
-<table class="screenshot-table">
+<table style="border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;">
   <tr>
-    <td class="screenshot-caption">Logout Page</td>
-    <td class="empty-cell"></td>
+    <td style="text-align: center;
+    padding: 6px;
+    font-weight: 600;
+    width: 50%;">Logout Page</td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
   <tr>
-    <td class="screenshot-img-cell">
-      <img class="screenshot-img" src="./assets/screenshots/logout.CropMate.png" alt="Logout Page">
+    <td style="text-align: center;
+    padding: 6px;
+    width: 50%;">
+      <img style="display: block;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;" src="./assets/screenshots/logout.CropMate.png" alt="Logout Page">
     </td>
-    <td class="empty-cell"></td>
+    <td style="width: 50%;
+    border: none;
+    background: none;"></td>
   </tr>
 </table>
 
