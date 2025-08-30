@@ -28,488 +28,223 @@ All data is securely stored and managed through **Supabase**, ensuring both **re
 
 **1. Landing Page**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Landing Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"><b>Landing Page</b></td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/landing.CropMate.png" alt="Landing Page">
+    <td align="left" width="50%">
+      <img src="./screenshots/landing.CropMate.png" alt="Landing Page">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
   </tr>
 </table>
 
 **2. Authentication**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Login Page</td>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">SignUp Page</td>
+    <td align="center" width="50%">Login Page</td>
+    <td align="center" width="50%">SignUp Page</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/login.CropMate.png" alt="Login Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/login.CropMate.png" alt="Login Page">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/signup.CropMate.png" alt="SignUp Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/signup.CropMate.png" alt="SignUp Page">
     </td>
   </tr>
 </table>
 
 **3. Home**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">User Home Page</td>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Admin Home Page</td>
+    <td align="center" width="50%">User Home Page</td>
+    <td align="center" width="50%">Admin Home Page</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/Screenshot_20250828-143052.CropMate.png" alt="User Home Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/Screenshot_20250828-143052.CropMate.png" alt="User Home Page">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/home_admin.CropMate.png" alt="Admin Home Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/home_admin.CropMate.png" alt="Admin Home Page">
     </td>
   </tr>
 </table>
 
 **4. Predictions**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Predictions Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center">Predictions Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/prediction.CropMate.png" alt="Predictions Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/prediction.CropMate.png" alt="Predictions Page">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
 
   <tr>
-    <td style="text-align: center;
-    padding: 8px;
-    font-weight: 600;
-    font-size: 1.1em;
-    border-bottom: 1px solid #ddd;" colspan="2">Check Soil Fertility</td>
+    <td align="center" border-bottom="1px solid #ddd" colspan="2">Check Soil Fertility</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/check_soil_fertility.CropMate.png" alt="Soil Fertility">
+    <td align="center" width="50%">
+      <img src="./screenshots/check_soil_fertility.CropMate.png" alt="Soil Fertility">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/soil_fertility-result.CropMate.png" alt="Soil Fertility Results">
+    <td align="center" width="50%">
+      <img src="./screenshots/soil_fertility-result.CropMate.png" alt="Soil Fertility Results">
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Soil Fertility History Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">Soil Fertility History Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/soil_fertility-history.CropMate.png" alt="Soil Fertility History">
+    <td align="center" width="50%">
+      <img src="./screenshots/soil_fertility-history.CropMate.png" alt="Soil Fertility History">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
   
   <tr>
-    <td style="text-align: center;
-    padding: 8px;
-    font-weight: 600;
-    font-size: 1.1em;
-    border-bottom: 1px solid #ddd;" colspan="2">Crop Recommendation (Nutrient-based)</td>
+    <td align="center" border-bottom="1px solid #ddd" colspan="2">Crop Recommendation (Nutrient-based)</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-1.CropMate.png" alt="Crop Recommendation(Nutrient-based)">
+    <td align="center" width="50%">
+      <img src="./screenshots/crop_recommendation-1.CropMate.png" alt="Crop Recommendation(Nutrient-based)">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-nutrient_result.CropMate.png" alt="Crop Recommendation(Nutrient-based) Results">
+    <td align="center" width="50%">
+      <img src="./screenshots/crop_recommendation-nutrient_result.CropMate.png" alt="Crop Recommendation(Nutrient-based) Results">
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Crop Recommendation(Nutrient-based) History Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">Crop Recommendation(Nutrient-based) History Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-history.CropMate.png" alt="Crop Recommendation(Nutrient-based) History">
+    <td align="center" width="50%">
+      <img src="./screenshots/crop_recommendation-history.CropMate.png" alt="Crop Recommendation(Nutrient-based) History">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
   
   <tr>
-    <td style="text-align: center;
-    padding: 8px;
-    font-weight: 600;
-    font-size: 1.1em;
-    border-bottom: 1px solid #ddd;" colspan="2">Crop Recommendation (Location-based)</td>
+    <td align="center" border-bottom="1px solid #ddd" colspan="2">Crop Recommendation (Location-based)</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-location1.CropMate.png" alt="Crop Recommendation(Location-based)">
+    <td align="center" width="50%">
+      <img src="./screenshots/crop_recommendation-location1.CropMate.png" alt="Crop Recommendation(Location-based)">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-location_result.CropMate.png" alt="Crop Recommendation(Location-based) Results">
+    <td align="center" width="50%">
+      <img src="./screenshots/crop_recommendation-location_result.CropMate.png" alt="Crop Recommendation(Location-based) Results">
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Crop Recommendation(Location-based) History Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">Crop Recommendation(Location-based) History Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/crop_recommendation-location.CropMate.png" alt="Crop Recommendation(Location-based) History">
+    <td align="center" width="50%">
+      <img src="./screenshots/crop_recommendation-location.CropMate.png" alt="Crop Recommendation(Location-based) History">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
 </table>
 
 **5. Recommendations**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Recommendations Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">Recommendations Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/recommendation.CropMate.png" alt="Recommendations Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/recommendation.CropMate.png" alt="Recommendations Page">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
 </table>
 
 **6. Collection (Admin)**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Collection Page</td>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">With Details</td>
+    <td align="center" width="50%">Collection Page</td>
+    <td align="center" width="50%">With Details</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/collection-1.CropMate.png" alt="Collection Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/collection-1.CropMate.png" alt="Collection Page">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/collection-2.CropMate.png" alt="With Details">
+    <td align="center" width="50%">
+      <img src="./screenshots/collection-2.CropMate.png" alt="With Details">
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Submit</td>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Success</td>
+    <td align="center" width="50%">Submit</td>
+    <td align="center" width="50%">Success</td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/collection-3.CropMate.png" alt="Submit">
+    <td align="center" width="50%">
+      <img src="./screenshots/collection-3.CropMate.png" alt="Submit">
     </td>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/collection-success.CropMate.png" alt="Success">
+    <td align="center" width="50%">
+      <img src="./screenshots/collection-success.CropMate.png" alt="Success">
     </td>
   </tr>
 </table>
 
 **7. View Collection Data**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">View Collection Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">View Collection Page</td>
+    <td align="center" width="50%"w></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/collection-view.CropMate.png" alt="View Collections Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/collection-view.CropMate.png" alt="View Collections Page">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
 </table>
 
 **8. Profile**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Profile Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">Profile Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/profile.CropMate.png" alt="Profile Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/profile.CropMate.png" alt="Profile Page">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
 </table>
 
 **9. Logout**
 
-<table style="border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-    margin-bottom: 20px;">
+<table>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    font-weight: 600;
-    width: 50%;">Logout Page</td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%">Logout Page</td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
-    <td style="text-align: center;
-    padding: 6px;
-    width: 50%;">
-      <img style="display: block;
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 6px;" src="./assets/screenshots/logout.CropMate.png" alt="Logout Page">
+    <td align="center" width="50%">
+      <img src="./screenshots/logout.CropMate.png" alt="Logout Page">
     </td>
-    <td style="width: 50%;
-    border: none;
-    background: none;"></td>
+    <td align="center" width="50%"></td>
   </tr>
 </table>
 
@@ -517,26 +252,27 @@ All data is securely stored and managed through **Supabase**, ensuring both **re
 
 ## 🏗 Tech Stack
 
-- **Frontend:** React Native (Expo)
-- **Backend:** Supabase (Authentication, Database, Storage)
-- **ML Service:** Custom Machine Learning API (Crop recommendation & fertility prediction)
-- **Sensors:** Bluetooth sensors for soil/environment data
-- **Maps:** React Native Maps
-- **Deployment:** EAS Build (Expo Application Services)
+- 🎨 **Frontend:** React Native (Expo)
+- 🛠 **Backend:** Supabase (Authentication, Database, Storage)
+- 🤖 **ML Service:** Custom Machine Learning API (Crop recommendation & fertility prediction)
+- 🌱 **Sensors:** NPK sensors, Soil sensors, Water level sensors, DH11 sensors for soil/environment data
+- 🔌 **Microcontroller Boards:** ESP32
+- 🗺 **Maps:** Expo Maps
+- 🚀 **Deployment:** EAS Build (Expo Application Services)
 
 ---
 
 ## 👥 User Roles
 
-- **Farmer/User:**
+- 👨‍🌾 **Farmer/User:**
 
   - Login/Signup
-  - Collect farm data from sensors(Bluetooth)
+  - Collect farm data from sensors(Soil and Water level)
   - View crop predictions
   - View crop recommendations & soil fertility reports
   - Access history
 
-- **Admin:**
+- 🧑‍💼 **Admin:**
   - Login/Signup
   - Manage users
   - Collect data directly from the field via sensors and upload it manually in **_Collections_** section
@@ -580,12 +316,9 @@ MAPS_API_KEY=your-google-maps-api-key
 npx expo start
 ```
 
-📱 Use the **Expo Go** app on your phone or emulator to preview the app.
 <br>
 
-##### Build with EAS
-
-## 🚀 Build with EAS (Expo Application Services)
+#### 🚀 Build with EAS (Expo Application Services)
 
 Follow these steps to build your app with [EAS Build](https://docs.expo.dev/build/introduction/):
 
@@ -609,16 +342,7 @@ eas build:configure
 
 This will create an `eas.json` file with default build profiles.
 
-4. **Configure App Metadata**
-   In your `app.json` or `app.config.js`, make sure you set:
-
-- `name`
-- `slug`
-- `version`
-- `ios.bundleIdentifier`
-- `android.package`
-
-5. **Run a Build**
+4. **Run a Build**
 
 - For Android:
 
@@ -638,28 +362,8 @@ eas build --platform ios
 eas build --platform all
 ```
 
-6. **Download Build**
-   Once the cloud build finishes, EAS will provide you with a download link (APK, AAB, or IPA).
-
-7. **(Optional) Submit to Stores**
-
-- Android (Play Store):
-
-```bash
-eas submit --platform android
-```
-
-- iOS (App Store):
-
-```bash
-eas submit --platform ios
-```
-
-8. **(Optional) Publish OTA Updates**
-
-```bash
-eas update --branch production --message "Bug fixes and improvements"
-```
+5. **Download Build**
+   Once the cloud build finishes, EAS will provide you with a download link (APK or AAB).
 
 ---
 
@@ -672,3 +376,5 @@ Contributions are welcome! Please fork the repo, create a branch, and submit a p
 ## 📜 License
 
 This project is licensed under the MIT License – see the [LICENSE ↗](https://choosealicense.com/licenses/mit/) file for details.
+
+---
